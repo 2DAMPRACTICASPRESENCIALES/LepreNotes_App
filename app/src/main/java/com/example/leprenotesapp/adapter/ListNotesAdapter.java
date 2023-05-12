@@ -1,6 +1,7 @@
 package com.example.leprenotesapp.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,10 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.leprenotesapp.R;
+import com.example.leprenotesapp.domain.NoteSingleton;
 import com.example.leprenotesapp.domain.Notes;
+import com.example.leprenotesapp.view.DetailActivityView;
+
 import java.util.List;
 
 public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.ListNotesHolder> {
@@ -65,7 +69,23 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
 
     }
 
-    private void noteDetail(int adapterPosition) {
+    private void noteDetail(int position) {
+
+        Notes note = notesList.get(position);
+
+        //Recuperamos datos a pasar a la nueva Activity para modificar
+        NoteSingleton noteSingleton = NoteSingleton.getInstance();
+        noteSingleton.setId(note.getId());
+        noteSingleton.setPrice(note.getPrice());
+        noteSingleton.setSubject(note.getSubject());
+        noteSingleton.setSchoolYear(note.getSchoolYear());
+        noteSingleton.setTitle(noteSingleton.getTitle());
+
+        //Pasamos a la activity detail
+        Intent intent = new Intent(context, DetailActivityView.class);
+        context.startActivity(intent);
+
+
     }
 
 }
