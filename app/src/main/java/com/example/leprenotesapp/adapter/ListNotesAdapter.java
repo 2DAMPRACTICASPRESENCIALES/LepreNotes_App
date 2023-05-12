@@ -35,7 +35,7 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
     }
     @Override
     public void onBindViewHolder(ListNotesHolder holder, int position) {
-       // holder.codeLine.setText(linesList.get(position).getCodeLine());
+       holder.title.setText(notesList.get(position).getTitle());
 
     }
 
