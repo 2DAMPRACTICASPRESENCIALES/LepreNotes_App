@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -35,7 +35,8 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
     }
     @Override
     public void onBindViewHolder(ListNotesHolder holder, int position) {
-       holder.title.setText(notesList.get(position).getTitle());
+       holder.subject.setText(notesList.get(position).getTitle());
+       holder.price.setText(String.valueOf(notesList.get(position).getPrice()));
 
     }
 
@@ -46,17 +47,25 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
 
     public class ListNotesHolder extends RecyclerView.ViewHolder {
 
-        public TextView title;
+        public TextView subject, price;
+        public Button goToDetailsButton;
         public View parentView;
 
         public ListNotesHolder(View view) {
             super(view);
             parentView = view;
 
-            title = view.findViewById(R.id.main_rcview_title);
+            subject = view.findViewById(R.id.main_rcview_subject);
+            price = view.findViewById(R.id.main_rcview_price);
+            goToDetailsButton = view.findViewById(R.id.main_rcview_seebutton);
+            
+            goToDetailsButton.setOnClickListener(notDe -> noteDetail(getAdapterPosition()));
 
         }
 
+    }
+
+    private void noteDetail(int adapterPosition) {
     }
 
 }

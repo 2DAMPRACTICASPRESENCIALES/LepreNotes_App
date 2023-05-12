@@ -15,23 +15,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="10dp">
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TITLE"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="71dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-        <TextView
-            android:id="@+id/main_rcview_title"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUBJECT"
+                tools:layout_editor_absoluteX="94dp"
+                tools:layout_editor_absoluteY="71dp" />
+
+            <TextView
+                android:id="@+id/main_rcview_subject"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/main_rcview_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="TextView" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/main_rcview_seebutton"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="139dp"
-            tools:layout_editor_absoluteY="70dp" />
+            android:layout_height="48dp"
+            android:layout_gravity="right|center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/go"
+            android:textSize="14sp"
+            app:icon="@android:drawable/ic_menu_view"
+            app:iconGravity="textStart"
+            app:iconSize="45dp" />
     </LinearLayout>
+
 </com.google.android.material.card.MaterialCardView>
