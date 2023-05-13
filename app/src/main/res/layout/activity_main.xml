@@ -16,23 +16,38 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher_leprenotes" />
+            android:layout_width="299dp"
+            android:layout_height="216dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@mipmap/ic_launcher_leprenotes_foreground" />
 
         <Button
             android:id="@+id/button_notes"
-            android:layout_width="match_parent"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:onClick="butSeeNotes"
-            android:text="Notes" />
+            android:text="Notes"
+            android:textSize="14dp"
+            android:backgroundTint="@color/pastelyellow"
+            android:strokeColor="@color/bluelepre"
+            app:icon="?attr/actionModePasteDrawable" />
 
         <Button
             android:id="@+id/button_reviews"
-            android:layout_width="match_parent"
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:onClick="buttSeeReviews"
-            android:text="Reviews" />
+            android:backgroundTint="@color/pastelyellow"
+            android:strokeColor="@color/bluelepre"
+            android:text="Reviews"
+            android:textSize="14dp"
+            app:icon="?android:attr/actionModeFindDrawable" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

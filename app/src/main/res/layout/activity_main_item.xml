@@ -8,9 +8,10 @@
     android:layout_marginTop="6dp"
     android:layout_marginRight="6dp"
     android:layout_marginBottom="6dp"
-    app:cardBackgroundColor="@color/cardview_shadow_end_color"
+    app:cardBackgroundColor="@color/pastelyellow"
     app:cardElevation="10dp"
-    app:contentPadding="10dp">
+    app:contentPadding="10dp"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -60,7 +61,8 @@
             android:textSize="14sp"
             app:icon="@android:drawable/ic_menu_view"
             app:iconGravity="textStart"
-            app:iconSize="45dp" />
+            app:iconSize="45dp"
+            android:backgroundTint="@color/white" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
