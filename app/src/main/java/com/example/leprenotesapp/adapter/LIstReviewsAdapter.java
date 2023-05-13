@@ -39,6 +39,7 @@ public class LIstReviewsAdapter extends RecyclerView.Adapter<LIstReviewsAdapter.
     public void onBindViewHolder(LIstReviewsAdapter.LIstReviewsHolder holder, int position) {
         holder.description.setText(reviewsList.get(position).getDescription());
         holder.postdate.setText(reviewsList.get(position).getPostDate());
+        holder.rating.setText(String.valueOf(reviewsList.get(position).getRating()));
 
     }
 
@@ -49,14 +50,13 @@ public class LIstReviewsAdapter extends RecyclerView.Adapter<LIstReviewsAdapter.
 
     public class LIstReviewsHolder extends RecyclerView.ViewHolder {
 
-        public TextView user, description,postdate,rating;
+        public TextView description,postdate,rating;
         public View parentView;
 
         public LIstReviewsHolder(View view) {
             super(view);
             parentView = view;
 
-            user = view.findViewById(R.id.reviews_rcview_user);
             description = view.findViewById(R.id.reviews_rcview_description);
             postdate = view.findViewById(R.id.reviews_rcview_postdate);
             rating = view.findViewById(R.id.reviews_rcview_rating);
