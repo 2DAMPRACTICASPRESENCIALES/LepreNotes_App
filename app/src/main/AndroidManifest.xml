@@ -16,7 +16,13 @@
         android:theme="@style/Theme.LepreNotesApp"
         tools:targetApi="31">
         <activity
-            android:name=".view.DetailActivityView"
+            android:name=".view.ListReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.ListNotesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.DetailNoteActivity"
             android:exported="false" />
         <activity
             android:name=".view.MainActivity"

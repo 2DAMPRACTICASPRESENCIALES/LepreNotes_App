@@ -19,6 +19,9 @@ public class Notes {
         this.price = price;
     }
 
+    public Notes() {
+    }
+
     public long getId() {
         return id;
     }

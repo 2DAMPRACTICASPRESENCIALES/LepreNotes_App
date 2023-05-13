@@ -13,15 +13,13 @@ public class NoteSingleton {
     private String schoolYear;
     private int price;
 
+    private NoteSingleton(){}
+
     public static NoteSingleton getInstance() {
         if (instance == null) {
             instance = new NoteSingleton();
         }
         return instance;
-    }
-
-    public static void setInstance(NoteSingleton instance) {
-        NoteSingleton.instance = instance;
     }
 
     public long getId() {

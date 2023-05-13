@@ -3,16 +3,16 @@ package com.example.leprenotesapp.presenter;
 import com.example.leprenotesapp.contract.SeeNotesContract;
 import com.example.leprenotesapp.domain.Notes;
 import com.example.leprenotesapp.model.SeeNotesModel;
-import com.example.leprenotesapp.view.MainActivity;
+import com.example.leprenotesapp.view.ListNotesActivity;
 
 import java.util.List;
 
 public class SeeNotesPresenter implements SeeNotesContract.Presenter, SeeNotesContract.Model.OnLoadNotesListener{
 
     private SeeNotesModel model;
-    private MainActivity view;
+    private ListNotesActivity view;
 
-    public SeeNotesPresenter ( MainActivity view){
+    public SeeNotesPresenter ( ListNotesActivity view){
         this.view = view;
         this.model = new SeeNotesModel();
 

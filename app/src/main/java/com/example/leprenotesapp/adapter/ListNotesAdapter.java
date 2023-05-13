@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.leprenotesapp.R;
 import com.example.leprenotesapp.domain.NoteSingleton;
 import com.example.leprenotesapp.domain.Notes;
-import com.example.leprenotesapp.view.DetailActivityView;
+import com.example.leprenotesapp.view.DetailNoteActivity;
 
 import java.util.List;
 
@@ -39,7 +39,7 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
     }
     @Override
     public void onBindViewHolder(ListNotesHolder holder, int position) {
-       holder.subject.setText(notesList.get(position).getTitle());
+       holder.subject.setText(notesList.get(position).getSubject());
        holder.price.setText(String.valueOf(notesList.get(position).getPrice()));
 
     }
@@ -79,10 +79,10 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
         noteSingleton.setPrice(note.getPrice());
         noteSingleton.setSubject(note.getSubject());
         noteSingleton.setSchoolYear(note.getSchoolYear());
-        noteSingleton.setTitle(noteSingleton.getTitle());
+        noteSingleton.setTitle(note.getTitle());
 
         //Pasamos a la activity detail
-        Intent intent = new Intent(context, DetailActivityView.class);
+        Intent intent = new Intent(context, DetailNoteActivity.class);
         context.startActivity(intent);
 
 

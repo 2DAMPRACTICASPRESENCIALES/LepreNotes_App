@@ -1,6 +1,7 @@
 package com.example.leprenotesapp.api;
 
 import com.example.leprenotesapp.domain.Notes;
+import com.example.leprenotesapp.domain.Reviews;
 
 import java.util.List;
 
@@ -15,4 +16,7 @@ public interface LepreNotesAPIInterface {
 
     @GET("notes/{id}")
     Call<Notes> getOneNote(@Path("id") long id);
+
+    @GET("reviews")
+    Call<List<Reviews>> getAllReviews();
 }
