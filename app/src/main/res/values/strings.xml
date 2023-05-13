@@ -3,4 +3,6 @@
     <string name="go">Go</string>
     <string name="subject">SUBJECT</string>
     <string name="price">PRICE</string>
+    <string name="see">See</string>
+    <string name="edit">edit</string>
 </resources>

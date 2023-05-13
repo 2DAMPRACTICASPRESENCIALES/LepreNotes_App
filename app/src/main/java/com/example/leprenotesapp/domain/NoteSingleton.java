@@ -9,7 +9,7 @@ public class NoteSingleton {
     private long id;
     private String title;
     private String subject;
-    private byte[] content;
+    private String content;
     private String schoolYear;
     private int price;
 
@@ -46,11 +46,11 @@ public class NoteSingleton {
         this.subject = subject;
     }
 
-    public byte[] getContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setContent(byte[] content) {
+    public void setContent(String content) {
         this.content = content;
     }
 

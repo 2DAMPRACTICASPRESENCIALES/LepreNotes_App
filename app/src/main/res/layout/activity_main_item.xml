@@ -50,19 +50,40 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/main_rcview_seebutton"
-            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-            android:layout_width="wrap_content"
-            android:layout_height="48dp"
-            android:layout_gravity="right|center_horizontal"
-            android:layout_marginTop="8dp"
-            android:text="@string/go"
-            android:textSize="14sp"
-            app:icon="@android:drawable/ic_menu_view"
-            app:iconGravity="textStart"
-            app:iconSize="45dp"
-            android:backgroundTint="@color/white" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/main_rcview_editbutton"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/edit"
+                android:textSize="14sp"
+                app:icon="@android:drawable/ic_menu_preferences"
+                app:iconGravity="textStart"
+                app:iconSize="45dp" />
+
+            <Button
+                android:id="@+id/main_rcview_seebutton"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                android:text="@string/see"
+                android:textSize="14sp"
+                app:icon="@android:drawable/ic_menu_view"
+                app:iconGravity="textStart"
+                app:iconSize="45dp" />
+        </LinearLayout>
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

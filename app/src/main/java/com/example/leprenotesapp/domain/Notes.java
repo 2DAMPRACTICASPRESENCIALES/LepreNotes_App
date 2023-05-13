@@ -6,11 +6,11 @@ public class Notes {
     private long id;
     private String title;
     private String subject;
-    private byte[] content;
+    private String content;
     private String schoolYear;
     private int price;
 
-    public Notes(long id, String title, String subject, byte[] content, String schoolYear, int price) {
+    public Notes(long id, String title, String subject, String content, String schoolYear, int price) {
         this.id = id;
         this.title = title;
         this.subject = subject;
@@ -46,11 +46,11 @@ public class Notes {
         this.subject = subject;
     }
 
-    public byte[] getContent() {
+    public String getContent() {
         return content;
     }
 
-    public void setContent(byte[] content) {
+    public void setContent(String content) {
         this.content = content;
     }
 

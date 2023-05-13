@@ -14,6 +14,7 @@ import com.example.leprenotesapp.R;
 import com.example.leprenotesapp.domain.NoteSingleton;
 import com.example.leprenotesapp.domain.Notes;
 import com.example.leprenotesapp.view.DetailNoteActivity;
+import com.example.leprenotesapp.view.EditNoteActivity;
 
 import java.util.List;
 
@@ -52,7 +53,7 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
     public class ListNotesHolder extends RecyclerView.ViewHolder {
 
         public TextView subject, price;
-        public Button goToDetailsButton;
+        public Button goToDetailsButton, editNotes;
         public View parentView;
 
         public ListNotesHolder(View view) {
@@ -62,11 +63,30 @@ public class ListNotesAdapter extends RecyclerView.Adapter<ListNotesAdapter.List
             subject = view.findViewById(R.id.main_rcview_subject);
             price = view.findViewById(R.id.main_rcview_price);
             goToDetailsButton = view.findViewById(R.id.main_rcview_seebutton);
+            editNotes = view.findViewById(R.id.main_rcview_editbutton);
             
             goToDetailsButton.setOnClickListener(notDe -> noteDetail(getAdapterPosition()));
+            editNotes.setOnClickListener(notDe -> editNote(getAdapterPosition()));
 
         }
 
+    }
+
+    private void editNote(int position) {
+        Notes note = notesList.get(position);
+
+        //Recuperamos datos a pasar a la nueva Activity para modificar
+        NoteSingleton noteSingleton = NoteSingleton.getInstance();
+        noteSingleton.setId(note.getId());
+        noteSingleton.setPrice(note.getPrice());
+        noteSingleton.setSubject(note.getSubject());
+        noteSingleton.setSchoolYear(note.getSchoolYear());
+        noteSingleton.setTitle(note.getTitle());
+        noteSingleton.setContent(note.getContent());
+
+        //Pasamos a la activity detail
+        Intent intent = new Intent(context, EditNoteActivity.class);
+        context.startActivity(intent);
     }
 
     private void noteDetail(int position) {
