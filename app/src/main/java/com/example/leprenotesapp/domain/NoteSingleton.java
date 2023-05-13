@@ -1,6 +1,9 @@
 package com.example.leprenotesapp.domain;
 
-public class Notes {
+public class NoteSingleton {
+
+    /** Clase usada para pasar datos entre Activities*/
+    private static NoteSingleton instance = null;
 
 
     private long id;
@@ -10,16 +13,13 @@ public class Notes {
     private String schoolYear;
     private int price;
 
-    public Notes(long id, String title, String subject, String content, String schoolYear, int price) {
-        this.id = id;
-        this.title = title;
-        this.subject = subject;
-        this.content = content;
-        this.schoolYear = schoolYear;
-        this.price = price;
-    }
+    private NoteSingleton(){}
 
-    public Notes() {
+    public static NoteSingleton getInstance() {
+        if (instance == null) {
+            instance = new NoteSingleton();
+        }
+        return instance;
     }
 
     public long getId() {

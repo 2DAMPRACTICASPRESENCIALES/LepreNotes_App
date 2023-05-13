@@ -7,11 +7,11 @@ public class Reviews {
 
     private long id;
     private String description;
-    private LocalDate postDate;
+    private String postDate;
     private int rating;
     private boolean isReported = false;
 
-    public Reviews(long id, String description, LocalDate postDate, int rating, boolean isReported) {
+    public Reviews(long id, String description, String postDate, int rating, boolean isReported) {
         this.id = id;
         this.description = description;
         this.postDate = postDate;
@@ -35,11 +35,11 @@ public class Reviews {
         this.description = description;
     }
 
-    public LocalDate getPostDate() {
+    public String getPostDate() {
         return postDate;
     }
 
-    public void setPostDate(LocalDate postDate) {
+    public void setPostDate(String postDate) {
         this.postDate = postDate;
     }
 
